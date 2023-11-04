@@ -35,11 +35,11 @@ namespace MySchool.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostStudent([FromBody] StudentDetails studentPayload)
+        public IActionResult PostStudent([FromBody] Student studentPayload)
         {
             var studentMasterData = new StudentMaster
             {
-                Name = studentPayload?.Student_master?.Name,
+                Name = studentPayload?.Name,
                 Student_details = new StudentDetails
                 {
                     Address = studentPayload?.Address,
